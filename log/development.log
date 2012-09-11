@@ -1,0 +1,1423 @@
+  [1m[36m (0.1ms)[0m  [1mselect sqlite_version(*)[0m
+  [1m[35m (78.6ms)[0m  CREATE TABLE "schema_migrations" ("version" varchar(255) NOT NULL) 
+  [1m[36m (0.0ms)[0m  [1mPRAGMA index_list("schema_migrations")[0m
+  [1m[35m (5.9ms)[0m  CREATE UNIQUE INDEX "unique_schema_migrations" ON "schema_migrations" ("version")
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+Migrating to CreateFortunes (20120325131330)
+  [1m[35m (0.0ms)[0m  begin transaction
+  [1m[36m (0.6ms)[0m  [1mCREATE TABLE "fortunes" ("id" INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, "quotation" text, "source" varchar(255), "created_at" datetime NOT NULL, "updated_at" datetime NOT NULL) [0m
+  [1m[35m (0.1ms)[0m  INSERT INTO "schema_migrations" ("version") VALUES ('20120325131330')
+  [1m[36m (37.6ms)[0m  [1mcommit transaction[0m
+  [1m[35m (0.2ms)[0m  select sqlite_version(*)
+  [1m[36m (0.1ms)[0m  [1mSELECT "schema_migrations"."version" FROM "schema_migrations" [0m
+  [1m[35m (0.0ms)[0m  PRAGMA index_list("fortunes")
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-11 18:48:00 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (35.0ms)
+Compiled bootstrap-responsive.css  (0ms)  (pid 29700)
+Compiled bootstrap-responsive.min.css  (0ms)  (pid 29700)
+Compiled bootstrap.css  (0ms)  (pid 29700)
+Compiled bootstrap.min.css  (0ms)  (pid 29700)
+Compiled fortunes.css  (74ms)  (pid 29700)
+Compiled scaffolds.css  (11ms)  (pid 29700)
+Compiled application.css  (155ms)  (pid 29700)
+Compiled jquery.js  (30ms)  (pid 29700)
+Compiled jquery_ujs.js  (0ms)  (pid 29700)
+Compiled bootstrap.js  (0ms)  (pid 29700)
+Compiled bootstrap.min.js  (0ms)  (pid 29700)
+Compiled fortunes.js  (199ms)  (pid 29700)
+Compiled application.js  (284ms)  (pid 29700)
+Completed 200 OK in 611ms (Views: 609.1ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 18:48:01 +0200
+Served asset /application.css - 200 OK (45ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 18:48:01 +0200
+Served asset /bootstrap-responsive.css - 200 OK (9ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 18:48:01 +0200
+Served asset /bootstrap-responsive.min.css - 200 OK (14ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 18:48:01 +0200
+Served asset /bootstrap.css - 200 OK (11ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 18:48:01 +0200
+Served asset /bootstrap.min.css - 200 OK (2ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 18:48:01 +0200
+Served asset /fortunes.css - 200 OK (2ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 18:48:01 +0200
+Served asset /scaffolds.css - 200 OK (8ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 18:48:01 +0200
+Served asset /jquery.js - 200 OK (19ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 18:48:01 +0200
+Served asset /jquery_ujs.js - 200 OK (15ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 18:48:01 +0200
+Served asset /bootstrap.js - 200 OK (2ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 18:48:01 +0200
+Served asset /bootstrap.min.js - 200 OK (1ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 18:48:01 +0200
+Served asset /fortunes.js - 200 OK (1ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 18:48:01 +0200
+Served asset /application.js - 200 OK (35ms)
+
+
+Started GET "/" for 127.0.0.1 at 2012-09-11 18:59:41 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 18.3ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 18:59:41 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 18:59:41 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 18:59:41 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 18:59:41 +0200
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 18:59:41 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 18:59:41 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 18:59:41 +0200
+Served asset /scaffolds.css - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 18:59:41 +0200
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 18:59:41 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 18:59:41 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 18:59:41 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 18:59:41 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 18:59:41 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2012-09-11 20:38:32 +0200
+Processing by FortunesController#new as HTML
+  Rendered fortunes/_form.html.erb (231.6ms)
+  Rendered fortunes/new.html.erb within layouts/application (267.5ms)
+Completed 200 OK in 287ms (Views: 273.5ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:32 +0200
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:32 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:32 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:32 +0200
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:32 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:32 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:32 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:32 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:32 +0200
+Served asset /bootstrap.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:32 +0200
+Served asset /scaffolds.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:32 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:32 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:32 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-09-11 20:38:40 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 21ms (Views: 19.9ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:40 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:40 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:40 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:40 +0200
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:40 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:40 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:40 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:40 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:40 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:40 +0200
+Served asset /bootstrap.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:40 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (13ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:40 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:40 +0200
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2012-09-11 20:38:45 +0200
+Processing by FortunesController#new as HTML
+  Rendered fortunes/_form.html.erb (8.8ms)
+  Rendered fortunes/new.html.erb within layouts/application (9.8ms)
+Completed 200 OK in 33ms (Views: 32.9ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:45 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:45 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:45 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:45 +0200
+Served asset /bootstrap.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:46 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:46 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 20:38:46 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:46 +0200
+Served asset /jquery.js - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:46 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:46 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:46 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (7ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:46 +0200
+Served asset /fortunes.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 20:38:46 +0200
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-09-11 20:39:16 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (0.6ms)
+Completed 200 OK in 36ms (Views: 34.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:16 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:16 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:16 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:16 +0200
+Served asset /bootstrap.css - 304 Not Modified (6ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:16 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:16 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:16 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:16 +0200
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:16 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:16 +0200
+Served asset /bootstrap.js - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:16 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:16 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:16 +0200
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2012-09-11 20:39:20 +0200
+Processing by FortunesController#new as HTML
+  Rendered fortunes/_form.html.erb (2.5ms)
+  Rendered fortunes/new.html.erb within layouts/application (11.9ms)
+Completed 200 OK in 38ms (Views: 32.3ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:20 +0200
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:20 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:20 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:20 +0200
+Served asset /bootstrap.css - 304 Not Modified (10ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:20 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:20 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:20 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:20 +0200
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:20 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:20 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:20 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:20 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:20 +0200
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2012-09-11 20:39:34 +0200
+Processing by FortunesController#new as HTML
+  Rendered fortunes/_form.html.erb (6.0ms)
+  Rendered fortunes/new.html.erb within layouts/application (7.5ms)
+Completed 200 OK in 23ms (Views: 15.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:34 +0200
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:34 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:34 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:34 +0200
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:34 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:34 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:34 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:34 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:34 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:34 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:34 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:34 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:34 +0200
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-09-11 20:39:38 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (5.0ms)
+Completed 200 OK in 44ms (Views: 43.4ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:38 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:38 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:38 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:38 +0200
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:38 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:38 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 20:39:38 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:38 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:38 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:38 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:38 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:38 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 20:39:38 +0200
+Served asset /application.js - 304 Not Modified (12ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2012-09-11 20:40:29 +0200
+Processing by FortunesController#new as HTML
+  Rendered fortunes/_form.html.erb (42.0ms)
+  Rendered fortunes/new.html.erb within layouts/application (43.2ms)
+Completed 500 Internal Server Error in 50ms
+
+ActionView::Template::Error (undefined method `źródło' for #<Fortune:0xb2a5840>):
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :source %><br />
+    20:     <%= f.text_field :źródło %>
+    21:   </div>
+    22:   <div class="actions">
+    23:     <%= f.submit %>
+  app/views/fortunes/_form.html.erb:20:in `block in _app_views_fortunes__form_html_erb___127899758_93656250'
+  app/views/fortunes/_form.html.erb:1:in `_app_views_fortunes__form_html_erb___127899758_93656250'
+  app/views/fortunes/new.html.erb:3:in `_app_views_fortunes_new_html_erb__1069401521_90617190'
+  app/controllers/fortunes_controller.rb:29:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (4.7ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (6.6ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (67.8ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2012-09-11 20:40:45 +0200
+Processing by FortunesController#new as HTML
+  Rendered fortunes/_form.html.erb (7.4ms)
+  Rendered fortunes/new.html.erb within layouts/application (8.2ms)
+Completed 500 Internal Server Error in 11ms
+
+ActionView::Template::Error (undefined method `zrodlo' for #<Fortune:0xb179714>):
+    17:   </div>
+    18:   <div class="field">
+    19:     <%= f.label :source %><br />
+    20:     <%= f.text_field :zrodlo %>
+    21:   </div>
+    22:   <div class="actions">
+    23:     <%= f.submit %>
+  app/views/fortunes/_form.html.erb:20:in `block in _app_views_fortunes__form_html_erb___127899758_93041720'
+  app/views/fortunes/_form.html.erb:1:in `_app_views_fortunes__form_html_erb___127899758_93041720'
+  app/views/fortunes/new.html.erb:3:in `_app_views_fortunes_new_html_erb__1069401521_90617190'
+  app/controllers/fortunes_controller.rb:29:in `new'
+
+
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_trace.erb (19.2ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/_request_and_response.erb (1.5ms)
+  Rendered /usr/local/rvm/gems/ruby-1.9.2-p320/gems/actionpack-3.2.2/lib/action_dispatch/middleware/templates/rescues/template_error.erb within rescues/layout (47.4ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2012-09-11 20:40:55 +0200
+Processing by FortunesController#new as HTML
+  Rendered fortunes/_form.html.erb (2.7ms)
+  Rendered fortunes/new.html.erb within layouts/application (4.6ms)
+Completed 200 OK in 17ms (Views: 16.6ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 20:40:55 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 20:40:55 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:40:55 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 20:40:55 +0200
+Served asset /bootstrap.css - 304 Not Modified (4ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:40:55 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 20:40:55 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 20:40:55 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 20:40:55 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 20:40:55 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 20:40:55 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 20:40:56 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 20:40:56 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 20:40:56 +0200
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started POST "/fortunes" for 127.0.0.1 at 2012-09-11 20:42:45 +0200
+Processing by FortunesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JrEWPfoUY3BnU708L8itz+kf6Qnvg2ENERcpTtNH+44=", "fortune"=>{"quotation"=>"Test", "source"=>"Test"}, "commit"=>"Create Fortune"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (85.3ms)[0m  [1mINSERT INTO "fortunes" ("created_at", "quotation", "source", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 11 Sep 2012 18:42:45 UTC +00:00], ["quotation", "Test"], ["source", "Test"], ["updated_at", Tue, 11 Sep 2012 18:42:45 UTC +00:00]]
+  [1m[35m (44.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/fortunes/1
+Completed 302 Found in 136ms (ActiveRecord: 130.3ms)
+
+
+Started GET "/fortunes/1" for 127.0.0.1 at 2012-09-11 20:42:45 +0200
+Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"1"}
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE "fortunes"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  Rendered fortunes/show.html.erb within layouts/application (0.9ms)
+Completed 200 OK in 58ms (Views: 55.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:45 +0200
+Served asset /application.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:45 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:45 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:45 +0200
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:45 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:45 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:45 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:45 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:45 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:45 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:45 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:46 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:46 +0200
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-09-11 20:42:49 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (3.2ms)
+Completed 200 OK in 11ms (Views: 10.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:49 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:49 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:49 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:49 +0200
+Served asset /bootstrap.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:49 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:49 +0200
+Served asset /fortunes.css - 304 Not Modified (16ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:49 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:49 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:49 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:49 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:50 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:50 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:50 +0200
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started DELETE "/fortunes/1" for 127.0.0.1 at 2012-09-11 20:42:57 +0200
+Processing by FortunesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JrEWPfoUY3BnU708L8itz+kf6Qnvg2ENERcpTtNH+44=", "id"=>"1"}
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE "fortunes"."id" = ? LIMIT 1[0m  [["id", "1"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.4ms)[0m  [1mDELETE FROM "fortunes" WHERE "fortunes"."id" = ?[0m  [["id", 1]]
+  [1m[35m (39.9ms)[0m  commit transaction
+Redirected to http://localhost:3000/fortunes
+Completed 302 Found in 44ms (ActiveRecord: 40.6ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-09-11 20:42:58 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (4.0ms)
+Completed 200 OK in 11ms (Views: 10.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:58 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:58 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:58 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:58 +0200
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:58 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:58 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 20:42:58 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:58 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:58 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:58 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:58 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:58 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 20:42:58 +0200
+Served asset /application.js - 304 Not Modified (16ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2012-09-11 20:46:08 +0200
+Processing by FortunesController#new as HTML
+  Rendered fortunes/_form.html.erb (6.9ms)
+  Rendered fortunes/new.html.erb within layouts/application (7.9ms)
+Completed 200 OK in 23ms (Views: 22.4ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:08 +0200
+Served asset /application.css - 304 Not Modified (20ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:08 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:08 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:08 +0200
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:08 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:08 +0200
+Served asset /fortunes.css - 304 Not Modified (77ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:08 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:08 +0200
+Served asset /jquery.js - 304 Not Modified (2ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:08 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (9ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:08 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:08 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (4ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:08 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:08 +0200
+Served asset /application.js - 304 Not Modified (11ms)
+
+
+Started POST "/fortunes" for 127.0.0.1 at 2012-09-11 20:46:15 +0200
+Processing by FortunesController#create as HTML
+  Parameters: {"utf8"=>"✓", "authenticity_token"=>"JrEWPfoUY3BnU708L8itz+kf6Qnvg2ENERcpTtNH+44=", "fortune"=>{"quotation"=>"test", "source"=>"Test"}, "commit"=>"Create Fortune"}
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.7ms)[0m  [1mINSERT INTO "fortunes" ("created_at", "quotation", "source", "updated_at") VALUES (?, ?, ?, ?)[0m  [["created_at", Tue, 11 Sep 2012 18:46:15 UTC +00:00], ["quotation", "test"], ["source", "Test"], ["updated_at", Tue, 11 Sep 2012 18:46:15 UTC +00:00]]
+  [1m[35m (105.5ms)[0m  commit transaction
+Redirected to http://localhost:3000/fortunes/2
+Completed 302 Found in 118ms (ActiveRecord: 106.3ms)
+
+
+Started GET "/fortunes/2" for 127.0.0.1 at 2012-09-11 20:46:15 +0200
+Processing by FortunesController#show as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFortune Load (0.1ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE "fortunes"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered fortunes/show.html.erb within layouts/application (3.4ms)
+Completed 200 OK in 12ms (Views: 11.0ms | ActiveRecord: 0.1ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:15 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:15 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:15 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:15 +0200
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:15 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:15 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:15 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:15 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:15 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:15 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:15 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:16 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:16 +0200
+Served asset /application.js - 304 Not Modified (7ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-09-11 20:46:17 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.2ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (1.5ms)
+Completed 200 OK in 10ms (Views: 8.7ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:18 +0200
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:18 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:18 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:18 +0200
+Served asset /bootstrap.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:18 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:18 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:18 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:18 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:18 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:18 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:18 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (10ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:18 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:18 +0200
+Served asset /application.js - 304 Not Modified (14ms)
+
+
+Started GET "/fortunes/2/edit" for 127.0.0.1 at 2012-09-11 20:46:20 +0200
+Processing by FortunesController#edit as HTML
+  Parameters: {"id"=>"2"}
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE "fortunes"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  Rendered fortunes/_form.html.erb (3.0ms)
+  Rendered fortunes/edit.html.erb within layouts/application (12.1ms)
+Completed 200 OK in 33ms (Views: 23.1ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:20 +0200
+Served asset /application.css - 304 Not Modified (7ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:20 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:20 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:20 +0200
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:21 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:21 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:21 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:21 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:21 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:21 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:21 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:21 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:21 +0200
+Served asset /application.js - 304 Not Modified (4ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-09-11 20:46:24 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (1.1ms)
+Completed 200 OK in 49ms (Views: 48.0ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:24 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:24 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:24 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:24 +0200
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:24 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:24 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:24 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:24 +0200
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:24 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:24 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:24 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:24 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:24 +0200
+Served asset /application.js - 304 Not Modified (13ms)
+
+
+Started DELETE "/fortunes/2" for 127.0.0.1 at 2012-09-11 20:46:28 +0200
+Processing by FortunesController#destroy as HTML
+  Parameters: {"authenticity_token"=>"JrEWPfoUY3BnU708L8itz+kf6Qnvg2ENERcpTtNH+44=", "id"=>"2"}
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" WHERE "fortunes"."id" = ? LIMIT 1[0m  [["id", "2"]]
+  [1m[35m (0.1ms)[0m  begin transaction
+  [1m[36mSQL (0.5ms)[0m  [1mDELETE FROM "fortunes" WHERE "fortunes"."id" = ?[0m  [["id", 2]]
+  [1m[35m (28.1ms)[0m  commit transaction
+Redirected to http://localhost:3000/fortunes
+Completed 302 Found in 31ms (ActiveRecord: 28.9ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-09-11 20:46:28 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.2ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (0.4ms)
+Completed 200 OK in 20ms (Views: 18.8ms | ActiveRecord: 0.2ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:29 +0200
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:29 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:29 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:29 +0200
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:29 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (3ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:29 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 20:46:29 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:29 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:29 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:29 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:29 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:29 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 20:46:29 +0200
+Served asset /application.js - 304 Not Modified (9ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-09-11 21:01:55 +0200
+Processing by FortunesController#index as HTML
+  [1m[35mFortune Load (0.3ms)[0m  SELECT "fortunes".* FROM "fortunes" 
+  Rendered fortunes/index.html.erb within layouts/application (0.3ms)
+Compiled bootstrap.css  (10ms)  (pid 29700)
+Compiled application.css  (1ms)  (pid 29700)
+Compiled application.js  (6ms)  (pid 29700)
+Completed 200 OK in 139ms (Views: 134.7ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 21:01:55 +0200
+Served asset /application.css - 304 Not Modified (27ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 21:01:55 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 21:01:55 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 21:01:55 +0200
+Served asset /bootstrap.css - 200 OK (16ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 21:01:55 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 21:01:55 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 21:01:55 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 21:01:55 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 21:01:55 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 21:01:55 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 21:01:55 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 21:01:55 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 21:01:55 +0200
+Served asset /application.js - 304 Not Modified (25ms)
+
+
+Started GET "/fortunes/new" for 127.0.0.1 at 2012-09-11 21:02:08 +0200
+Processing by FortunesController#new as HTML
+  Rendered fortunes/_form.html.erb (2.1ms)
+  Rendered fortunes/new.html.erb within layouts/application (3.0ms)
+Completed 200 OK in 31ms (Views: 30.8ms | ActiveRecord: 0.0ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 21:02:08 +0200
+Served asset /application.css - 304 Not Modified (2ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 21:02:08 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 21:02:08 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 21:02:08 +0200
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 21:02:08 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 21:02:08 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 21:02:08 +0200
+Served asset /scaffolds.css - 304 Not Modified (12ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 21:02:08 +0200
+Served asset /jquery.js - 304 Not Modified (11ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 21:02:08 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 21:02:08 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 21:02:08 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (84ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 21:02:08 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 21:02:08 +0200
+Served asset /application.js - 304 Not Modified (3ms)
+
+
+Started GET "/fortunes" for 127.0.0.1 at 2012-09-11 21:02:12 +0200
+Processing by FortunesController#index as HTML
+  [1m[36mFortune Load (0.3ms)[0m  [1mSELECT "fortunes".* FROM "fortunes" [0m
+  Rendered fortunes/index.html.erb within layouts/application (0.5ms)
+Completed 200 OK in 27ms (Views: 20.6ms | ActiveRecord: 0.3ms)
+
+
+Started GET "/assets/application.css?body=1" for 127.0.0.1 at 2012-09-11 21:02:12 +0200
+Served asset /application.css - 304 Not Modified (8ms)
+
+
+Started GET "/assets/bootstrap-responsive.css?body=1" for 127.0.0.1 at 2012-09-11 21:02:12 +0200
+Served asset /bootstrap-responsive.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap-responsive.min.css?body=1" for 127.0.0.1 at 2012-09-11 21:02:12 +0200
+Served asset /bootstrap-responsive.min.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.css?body=1" for 127.0.0.1 at 2012-09-11 21:02:12 +0200
+Served asset /bootstrap.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.css?body=1" for 127.0.0.1 at 2012-09-11 21:02:12 +0200
+Served asset /bootstrap.min.css - 304 Not Modified (5ms)
+
+
+Started GET "/assets/fortunes.css?body=1" for 127.0.0.1 at 2012-09-11 21:02:12 +0200
+Served asset /fortunes.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/scaffolds.css?body=1" for 127.0.0.1 at 2012-09-11 21:02:12 +0200
+Served asset /scaffolds.css - 304 Not Modified (0ms)
+
+
+Started GET "/assets/jquery.js?body=1" for 127.0.0.1 at 2012-09-11 21:02:12 +0200
+Served asset /jquery.js - 304 Not Modified (1ms)
+
+
+Started GET "/assets/jquery_ujs.js?body=1" for 127.0.0.1 at 2012-09-11 21:02:12 +0200
+Served asset /jquery_ujs.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.js?body=1" for 127.0.0.1 at 2012-09-11 21:02:12 +0200
+Served asset /bootstrap.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/bootstrap.min.js?body=1" for 127.0.0.1 at 2012-09-11 21:02:12 +0200
+Served asset /bootstrap.min.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/fortunes.js?body=1" for 127.0.0.1 at 2012-09-11 21:02:12 +0200
+Served asset /fortunes.js - 304 Not Modified (0ms)
+
+
+Started GET "/assets/application.js?body=1" for 127.0.0.1 at 2012-09-11 21:02:12 +0200
+Served asset /application.js - 304 Not Modified (2ms)
